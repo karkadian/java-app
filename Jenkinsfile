@@ -31,16 +31,12 @@ pipeline {
         }
         stage('Push') {
             steps {
-                sh '''
-                    echo 'Hola Mundo'
-                '''
+                sh './jenkins/push/push.sh'
             }
         }
         stage('Deploy') {
             steps {
-                sh '''
-                    echo 'Hola Mundo'
-                '''
+                sh './jenkins/deploy/deploy.sh'
             }
         }
     }
